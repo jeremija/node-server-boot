@@ -5,7 +5,7 @@ const fs = require('fs')
 
 
 const PORT = 3005
-const SOCKET = 'unix.socket'
+const SOCKET = './unix.socket'
 
 
 describe('Boot', () => {
@@ -129,19 +129,13 @@ describe('Boot', () => {
 
   describe('unix socket - fails when it\'s a regular file', () => {
 
-    const FILE = 'test-file'
-    beforeEach(() => {
-      fs.writeFileSync(FILE, 'test')
-    })
-
-    afterEach(() => {
-      fs.unlinkSync(FILE)
-    })
+    const FILE = './some/totally//non-existing/path/to/file'
 
     it('should complain about a file', done => {
       new Boot(app).start(FILE)
+      .then(done.fail)
       .catch(err => {
-        expect(err.code).toEqual('ENOTSOCK')
+        expect(err.code).toEqual('ENOENT')
         done()
       })
     })

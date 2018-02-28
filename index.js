@@ -1,4 +1,3 @@
-// const debug = require('debug')('server-boot')
 const { Socket } = require('net')
 const fs = require('fs')
 
