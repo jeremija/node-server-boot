@@ -1,4 +1,6 @@
-# Server-Boot [![Build Status](https://travis-ci.org/jeremija/node-server-boot.svg?branch=master)](https://travis-ci.org/jeremija/node-server-boot)
+# Server-Boot
+
+![Build Status](https://travis-ci.org/jeremija/node-server-boot.svg?branch=master)](https://travis-ci.org/jeremija/node-server-boot)
 
 # Usage:
 
