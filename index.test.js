@@ -138,7 +138,7 @@ describe('Boot', () => {
       fs.unlinkSync(FILE)
     })
 
-    it('should start the application even if dead unix socket exists', done => {
+    it('should complain about a file', done => {
       new Boot(app).start(FILE)
       .catch(err => {
         expect(err.code).toEqual('ENOTSOCK')
