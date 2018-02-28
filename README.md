@@ -7,7 +7,7 @@ new Boot(app).start(port)
 .then(server => {
   console.log('started')
 })
-.catch((err: Error) => {
+.catch(err => {
   console.log(err.message)
   process.exit(1)
 })
