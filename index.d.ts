@@ -1,16 +1,18 @@
+import { Server } from 'http'
+
 declare module 'server-boot' {
   type Port = number | string
 
   type Callback = (any) => any
 
-  interface Server {
+  interface Listenable {
     listen (Port, string, Callback)
   }
 
-  class Boot<T extends Server> {
-    constructor (server: T)
-    startServer (port: Port, bind?: string): Promise<T>
-    start (port: Port, bind?: string): Promise<T>
+  class Boot {
+    constructor (server: Listenable)
+    startServer (port: Port, bind?: string): Promise<Server>
+    start (port: Port, bind?: string): Promise<Server>
   }
 
   namespace Boot {}
