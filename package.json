@@ -1,0 +1,31 @@
+{
+  "name": "server-boot",
+  "version": "1.0.0",
+  "description": "Helps with unlinking of unix sockets on startup",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremija/node-server-boot.git"
+  },
+  "keywords": [
+    "server",
+    "startup",
+    "boot",
+    "unix",
+    "socket",
+    "unlink"
+  ],
+  "author": "Jerko Steiner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeremija/node-server-boot/issues"
+  },
+  "homepage": "https://github.com/jeremija/node-server-boot#readme",
+  "devDependencies": {
+    "jest": "^22.4.2",
+    "supertest": "^3.0.0"
+  }
+}
